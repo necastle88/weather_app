@@ -21,6 +21,7 @@ body{
 }
 .app_header {
 width: 100%;
+width: 800px;
 border-bottom: 2px solid #36454f;
 padding: 0 0 .3em 0;
 font-size: 2em;
@@ -56,6 +57,30 @@ font-size: 2em;
 .entries-icon {
   height: 150px;
 }
+.entries-data-container {
+  display: inline-flex;
+  align-items: center;
+  font-size: 2.5em;
+}
+p.entries-data-date {
+  margin: 0px 30px 0px 5px;
+  /* font-size: 2em; */
+}
+
+p.entries-data-temp {
+  margin: 0px 30px 0px 5px;
+  /* font-size: 2em; */
+}
+
+p.entries-data-feeling {
+  margin: 0px 30px 0px 5px;
+  /* font-size: 2em; */
+}
+
+.app_entries_container {
+  margin-top: 4em;
+}
+
 .title{
   width: 100%;
   border-bottom: 2px solid #36454f;
@@ -83,14 +108,16 @@ label{
 }
 
 input{
-  display:block;
+  display: block;
   height: 60px;
-  width: 320px;
-  background:#22b2da;
-  color: #36454f;;
+  width: 100%;
+  color: #36454f;
   font-size: 20px;
   font-family: 'Oswald', sans-serif;
-  border: none;
+  border-bottom: 2px solid #36454f;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 
 button{
@@ -108,33 +135,22 @@ h1{
 }
 
 textarea{
-  background:#fffff8;
-  color: white;
+  background: #fff;
+  color: #36454f;
+  width: 100%;
+  height: 5em;
+  font-family: 'Oswald', sans-serif;
+  border-bottom: 2px solid #36454f;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  overflow: hidden;
+}
+textarea#feelings::placeholder {
   font-size: 20px;
+  padding: 27px 0;
+
+::placeholder { 
+  color: #98a0a5; 
   font-family: 'Oswald', sans-serif;
-}
-/* Reset style for HTML element on active to have no border*/
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: none;
-}
-/* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-  color: #f0d43a; 
-  font-family: 'Oswald', sans-serif;
-
-} 
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-  color: #f0d43a; 
-  font-family: 'Oswald', sans-serif;
-
-} 
-
-::-ms-input-placeholder { /* Microsoft Edge */ 
-  color: #f0d43a; 
-  font-family: 'Oswald', sans-serif;
-
 } 
