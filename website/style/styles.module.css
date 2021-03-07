@@ -4,16 +4,26 @@ body{
 }
 
 #app{
+  padding: .5em 2em;
   display: grid;
-  grid-auto-rows: minmax(150px, auto);
-  /* grid-template-columns:  */
+  grid-auto-rows: 72px 125px 368px auto;
+  grid-template-areas:
+  "header"
+  "input"
+  "results";
   height:100vh;
   background:white;
-  color: #f0d43a;
+  color: #36454f;
   justify-content: center;
   grid-gap: 1em;
   font-size: 20px;
   font-family: 'Oswald', sans-serif;
+}
+.app_header {
+width: 100%;
+border-bottom: 2px solid #36454f;
+padding: 0 0 .3em 0;
+font-size: 2em;
 }
 
 .holder{
@@ -43,11 +53,30 @@ body{
 .headline {
 
 }
+.entries-icon {
+  height: 150px;
+}
 .title{
-
+  width: 100%;
+  border-bottom: 2px solid #36454f;
+  padding: 0 0 .3em 0;
+  font-size: 2em;
 }
 
+.entries-container {
+  display: grid;
+  grid-template-areas:
+      "image"
+      "text";
+  grid-template-columns: 20% 79%;
+  border-radius: 24px;
+  background-color: #0093E9;
+  background-image: linear-gradient(297deg, #0093E9 0%, #80D0C7 100%);
+  margin-top: 1.5em;
+  color: #fff;
+}
 /*  Basic Styling To Override Default For Basic HTML Elements */
+
 label{
   display:block;
   font-size: 27px;
@@ -58,7 +87,7 @@ input{
   height: 60px;
   width: 320px;
   background:#22b2da;
-  color: #f0d43a;
+  color: #36454f;;
   font-size: 20px;
   font-family: 'Oswald', sans-serif;
   border: none;

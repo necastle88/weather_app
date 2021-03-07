@@ -1,9 +1,9 @@
-const projectData = {};
-const data = [];
+const projectData = [];
 
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 /* Dependencies */
 app.use(express.urlencoded({ extended: false }));
@@ -22,11 +22,11 @@ function listening(){
 };
 
 const addData = (req, res) => {
-  console.log(req.body);
-  data.push(req.body);
+    projectData.push(req.body);
+    console.log(projectData)
 }
 
-app.get('/', (req, res) => {
+app.get('/data', (req, res) => {
   res.send(projectData);
 })
 
