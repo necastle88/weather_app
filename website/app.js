@@ -1,5 +1,5 @@
 /* Global Variables */
-const key = "us&appid=fc0b4b1be4519f6a93062ae29e065822";
+const key = "us&appid=fc0b4b1be4519f6a93062ae29e065822&units=imperial";
 const baseURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
 
 // Create a new date instance dynamically with JS
@@ -47,7 +47,7 @@ function performAction(e) {
   getData(baseURL, getZip, key)
   .then(res => {
     const newData = {
-      temp: Math.ceil((res.main.temp - 273.15) * 9/5 + 32) + '°F', 
+      temp: Math.floor(res.main.temp) + '°F', 
       date: newDate,
       main: res.weather['0'].main,
       icon: `http://openweathermap.org/img/wn/${res.weather['0'].icon}.png`,
