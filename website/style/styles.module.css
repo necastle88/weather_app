@@ -1,3 +1,8 @@
+html {
+  display: flex;
+  justify-content: center;
+}
+
 body{
   background: #fffff8;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -6,7 +11,7 @@ body{
 #app{
   padding: .5em 2em;
   display: grid;
-  grid-auto-rows: 72px 125px 368px auto;
+  grid-auto-rows: 94px 125px 220px auto;
   grid-template-areas:
   "header"
   "input"
@@ -20,40 +25,18 @@ body{
   font-family: 'Oswald', sans-serif;
 }
 .app_header {
-width: 100%;
-width: 800px;
-border-bottom: 2px solid #36454f;
-padding: 0 0 .3em 0;
-font-size: 2em;
-}
-
-.holder{
-
+  width: 100%;
+  width: 800px;
+  padding: 0 0 1em 0;
+  font-size: 3em;
+  margin-bottom: -14px;
+  color:#0093E9;
 }
 
 .entry{
   background: rgba(59, 74, 107, .4);
 }
 
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
-}
-
-.headline {
-
-}
 .entries-icon {
   height: 150px;
 }
@@ -62,23 +45,14 @@ font-size: 2em;
   align-items: center;
   font-size: 2.5em;
 }
-p.entries-data-date {
+p.entries-data-date,
+p.entries-data-temp,
+p.entries-data-feeling  {
   margin: 0px 30px 0px 5px;
-  /* font-size: 2em; */
-}
-
-p.entries-data-temp {
-  margin: 0px 30px 0px 5px;
-  /* font-size: 2em; */
-}
-
-p.entries-data-feeling {
-  margin: 0px 30px 0px 5px;
-  /* font-size: 2em; */
 }
 
 .app_entries_container {
-  margin-top: 4em;
+  margin-top: 1em;
 }
 
 .title{
@@ -86,6 +60,7 @@ p.entries-data-feeling {
   border-bottom: 2px solid #36454f;
   padding: 0 0 .3em 0;
   font-size: 2em;
+  margin-top: .6em;
 }
 
 .entries-container {
@@ -100,14 +75,13 @@ p.entries-data-feeling {
   margin-top: 1.5em;
   color: #fff;
 }
-/*  Basic Styling To Override Default For Basic HTML Elements */
 
-label{
+label {
   display:block;
   font-size: 27px;
 }
 
-input{
+input {
   display: block;
   height: 60px;
   width: 100%;
@@ -120,17 +94,18 @@ input{
   border-left: none;
 }
 
-button{
-  width: 400px;
+button {
+  width: 100%;
   height: 100px;
-  background: #3b4a6b;
-  color: #f0d43a;
-  font-size: 26px;
+  background: #fff;
+  color: #0093E9;
+  font-size: 32px;
   font-family: 'Oswald', sans-serif;
-  border: none;
-  box-shadow: 2px 4px 5px #444;
+  border: 4px solid #0093E9;
+  margin-top: 36px;
 }
-h1{
+
+h1 {
   font-size: 36px;
 }
 
@@ -146,9 +121,6 @@ textarea{
   border-left: none;
   overflow: hidden;
 }
-textarea#feelings::placeholder {
-  font-size: 20px;
-  padding: 27px 0;
 
 ::placeholder { 
   color: #98a0a5; 
